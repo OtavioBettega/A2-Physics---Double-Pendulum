@@ -16,6 +16,8 @@ theta1 = math.pi / 2    # Angle of weights
 theta2 = -math.pi / 2
 theta1_v = 0            # Initial velocity
 theta2_v = 0
+friction1 = 1           # Friction - energy loss in the axles. 1 = no energy loss.
+friction2 = 1
 g = 1                   # Gravity
 
 # Anchor point
@@ -72,6 +74,10 @@ def time_step(dt):
     theta2 += R[1]
     theta1_v += R[2]
     theta2_v += R[3]
+    
+    # Friction 
+    theta1_v *= friction1
+    theta2_v *= friction2
 
 # Main loop
 while True:
