@@ -39,7 +39,7 @@ def calculate_total_energy():
 
     return K1 + K2 + V
 
-# Computes equations of motion 
+# Defines the equations of motion (derived from Euler-Lagrange)
 def eulerlagrange(t1, t2, w1, w2):
     theta1 = (len2 / len1) * (mass2 / (mass1 + mass2)) * math.cos(t1 - t2)
     theta2 = (len1 / len2) * math.cos(t1 - t2)
