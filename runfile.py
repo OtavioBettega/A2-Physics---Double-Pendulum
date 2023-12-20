@@ -52,7 +52,8 @@ def eulerlagrange(t1, t2, w1, w2):
 
     return numpy.array([w1, w2, o1, o2])
 
-# Perform time step updating angles, solving equations using Runge-Kutta method
+# Perform time step updating angles, solving equations using Runge-Kutta method,
+# (Haven't covered differential equations yet, so this is something of a black box implementation)
 def time_step(dt):
     global theta1, theta2, theta1_v, theta2_v
 
